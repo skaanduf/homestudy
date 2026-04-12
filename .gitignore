@@ -1,0 +1,14 @@
+# PDF 원본 파일 (용량 초과)
+social/*.pdf
+
+# Node
+study-web/node_modules
+study-web/dist
+study-web/dist-ssr
+study-web/*.local
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
