@@ -1,0 +1,194 @@
+/* SocialStudyAll.css - Premium Course Dashboard Style */
+
+:root {
+  --all-sidebar-bg: #0f172a;
+  --all-main-bg: #f8fafc;
+  --all-primary: #3b82f6;
+  --all-secondary: #6366f1;
+  --all-card-bg: #ffffff;
+  --all-text-main: #1e293b;
+  --all-text-muted: #64748b;
+  --all-border: #e2e8f0;
+}
+
+.social_dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--all-main-bg);
+  font-family: 'Pretendard', sans-serif;
+}
+
+/* Sidebar Customization */
+.sidebar {
+  width: 280px;
+  background-color: var(--all-sidebar-bg);
+  color: white;
+  padding: 1.5rem;
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.2);
+}
+
+.menu_item {
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.menu_item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  transform: translateX(5px);
+}
+
+.menu_item.active {
+  background: var(--all-primary);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Main Content Layout */
+.main_wrapper {
+  margin-left: 280px;
+  flex: 1;
+  padding: 3rem 4rem;
+  max-width: 1400px;
+}
+
+/* Advanced Card Design */
+.study_card {
+  background: var(--all-card-bg);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--all-border);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.study_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.08);
+}
+
+.card_title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--all-text-main);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* High Fidelity Diagrams */
+.diagram-container {
+  background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
+  border-radius: 24px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  border: 1px dashed #cbd5e1;
+  overflow-x: auto;
+}
+
+.process-flow {
+  display: flex;
+  align-items: center;
+  min-width: 700px;
+  justify-content: space-around;
+}
+
+.flow-circle {
+  width: 120px;
+  height: 120px;
+  background: white;
+  border: 3px solid var(--all-primary);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.15);
+  transition: all 0.3s ease;
+}
+
+.flow-circle:hover {
+  background: var(--all-primary);
+  color: white;
+  transform: scale(1.1);
+}
+
+.flow-connector {
+  flex-grow: 1;
+  height: 4px;
+  background: #e2e8f0;
+  position: relative;
+}
+
+.flow-connector::after {
+  content: '→';
+  position: absolute;
+  right: -5px;
+  top: -12px;
+  color: #94a3b8;
+  font-size: 1.2rem;
+}
+
+/* Mindmap Styles */
+.mindmap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.root-node {
+  background: var(--all-secondary);
+  color: white;
+  padding: 1.25rem 3rem;
+  border-radius: 100px;
+  font-weight: 800;
+  font-size: 1.3rem;
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+
+.node {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.node:hover {
+  border-color: var(--all-secondary);
+  background: white;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
