@@ -2,6 +2,82 @@ import './SocialStudy.css'
 
 const sections = [
   {
+    unit: '단원 1',
+    title: '내가 사는 세계 (지리 기초)',
+    color: 'orange',
+    topics: [
+      {
+        num: '①',
+        title: '위치 표현과 기후, 지형',
+        pages: 'pp.12~28',
+        content: [
+          {
+            type: 'table',
+            title: '위도와 경도의 비교',
+            headers: ['구분', '위도', '경도'],
+            rows: [
+              ['기준선', '적도 (가로선)', '본초 자오선 (세로선)'],
+              ['가장 큰 영향', '기후 차이 발생', '시간 차이 발생'],
+            ]
+          },
+          {
+            type: 'table',
+            title: '습곡 산지 비교',
+            headers: ['특징', '신기 습곡 산지', '고기 습곡 산지'],
+            rows: [
+              ['모양 매장', '비교적 최근 생성, 험준, 석유/구리', '오래전 생성, 완만, 석탄/철광석'],
+            ]
+          },
+          {
+            type: 'quiz',
+            difficulty: '보통',
+            question: '다음 [도표]는 세계의 시차 계산 원리를 나타낸 것이다. 이를 바탕으로 추론한 내용 중 가장 옳은 것은?',
+            context: '(서경) -1시간 ← | ... | 런던(본초 자오선 0도, 오전 9시) | ... | → +1시간 (동경)\n* 15도 이동할 때마다 1시간의 시차가 발생함.',
+            choices: [
+              '경도선은 기후대를 결정짓는 가장 중요한 기준선이다.',
+              '런던에서 동쪽으로 이동할수록 시간이 점차 느려진다.',
+              '런던이 오전 9시라면, 동경 135도에 위치한 대한민국은 오후 6시일 것이다.',
+              '서경 15도에 위치한 도시는 런던보다 시간이 1시간 빠를 것이다.',
+              '시차를 결정하는 것은 위도이며, 계절은 경도이다.'
+            ],
+            answer: 3,
+            explanation: '지구는 24시간 동안 360도를 자전하므로 1시간에 15도씩 회전합니다. 동쪽은 런던보다 해를 일찍 보므로 시간이 빠릅니다. 동경 135도는 런던(0도)과 135/15 = 9시간 차이가 나며 런던의 오전 9시 + 9시간 = 오후 6시가 됩니다. 그리고 기후는 위도, 시차는 경도가 결정합니다.'
+          },
+          {
+            type: 'quiz',
+            difficulty: '어려움',
+            question: '다음 지도 정보의 A, B 지역 산지 지형과 관련된 설명이다. 주어진 정보로 옳은 것은?',
+            context: '[지도 정보]\n* A (환태평양 조산대) : 로키 산맥 및 안데스 산맥 지역\n* B (대륙 내부) : 애팔래치아 산맥 및 우랄 산맥 지역',
+            choices: [
+              'A지역 산지들은 오랜 기간 침식을 받아 해발 고도가 낮고 완만하다.',
+              'B지역은 고기 습곡 산지로 분류되며 석탄이나 철광석이 풍부하다.',
+              'A지역의 산지는 B지역 산지보다 먼저 생성되었 기 때문에 험준한 산세를 유지한다.',
+              'B지역은 지각 변동이 활발해 지진과 화산 활동이 빈번하다.',
+              'A지역과 B지역은 모두 계절풍의 강한 영향을 받아 벼농사가 발달한다.'
+            ],
+            answer: 2,
+            explanation: 'B지역(우랄, 애팔래치아)은 오랜 침식으로 완만하고 석탄/철광석이 많은 고기 습곡 산지입니다. 반면 A지역(로키, 안데스)은 최근에 생성되어 험준하고 화산/지진이 잦은 신기 습곡 산지입니다.'
+          },
+          {
+            type: 'quiz',
+            difficulty: '쉬움',
+            question: '지구의 위치 표현이다. A(가로선)와 B(세로선)에 들어갈 개념과 연결 특징으로 올바르게 짝지어진 것은?',
+            context: '- (A) : 적도 기준 가로선, 각 지역의 [ㄱ] 분포에 영향\n- (B) : 본초 자오선 기준 세로선, 각 지역의 [ㄴ] 차이 발생에 영향',
+            choices: [
+              'A: 위도, B: 경도, ㄱ: 기후, ㄴ: 시간',
+              'A: 위도, B: 경도, ㄱ: 시간, ㄴ: 기후',
+              'A: 경도, B: 위도, ㄱ: 지형, ㄴ: 기후',
+              'A: 경도, B: 위도, ㄱ: 시간, ㄴ: 지형',
+              'A: 위도, B: 고도, ㄱ: 화산, ㄴ: 계절'
+            ],
+            answer: 1,
+            explanation: '적도를 기준으로 하는 가로선은 위도(A)이며 태양 에너지를 받는 양이 달라져 기후(ㄱ) 분포에 영향을 줍니다. 본초 자오선을 기준으로 하는 세로선은 경도(B)이며 지구가 자전함에 따라 시간(ㄴ) 차이를 일으킵니다.'
+          }
+        ]
+      }
+    ]
+  },
+  {
     unit: '단원 9',
     title: '정치와 민주주의',
     color: 'blue',
@@ -239,6 +315,7 @@ type Content =
   | { type: 'table'; title: string; headers: string[]; rows: string[][] }
   | { type: 'timeline'; title: string; steps: { label: string; desc: string }[] }
   | { type: 'flow'; title: string; steps: string[] }
+  | { type: 'quiz'; difficulty: string; question: string; context?: string; choices: string[]; answer: number; explanation: string }
 
 function renderContent(c: Content, i: number) {
   switch (c.type) {
@@ -314,6 +391,28 @@ function renderContent(c: Content, i: number) {
           </div>
         </div>
       )
+    case 'quiz':
+      return (
+        <div key={i} className="card quiz-card">
+          <div className="quiz-header">
+            <span className={`quiz-badge diff-${c.difficulty}`}>{c.difficulty}</span>
+            <h4 className="quiz-q">{c.question}</h4>
+          </div>
+          {c.context && <pre className="quiz-context">{c.context}</pre>}
+          <ol className="quiz-choices">
+            {c.choices.map((choice, j) => (
+              <li key={j}>{choice}</li>
+            ))}
+          </ol>
+          <details className="quiz-exp">
+            <summary>정답 및 해설 보기</summary>
+            <div className="quiz-exp-content">
+              <strong>정답: {c.answer}번</strong>
+              <p>{c.explanation}</p>
+            </div>
+          </details>
+        </div>
+      )
   }
 }
 
@@ -322,15 +421,15 @@ export default function SocialStudy() {
     <div className="social-study">
       <header className="study-header">
         <div className="header-badge">사회 1</div>
-        <h1>정치와 민주주의</h1>
-        <p className="subtitle">교과서 154~178페이지 핵심 요약</p>
-        <div className="page-range">📖 단원 9 · 단원 10</div>
+        <h1>중등 사회 전체 요약 밎 실전 모의고사</h1>
+        <p className="subtitle">교과서 핵심 요약 및 표/그래프 실전 출제 문제 풀이</p>
+        <div className="page-range">📖 단원 1 · 단원 9 · 단원 10</div>
       </header>
 
       {/* 키워드 요약 */}
       <section className="keyword-bar">
-        <span className="kw-label">핵심 키워드</span>
-        {['정치', '민주주의', '직접·간접 민주주의', '3대 이념', '선거 4원칙', '정치 주체', '지방자치'].map((kw, i) => (
+        <span className="kw-label">주요 키워드</span>
+        {['위도와 경도', '기후', '시간차별', '정치', '민주주의', '선거 4원칙', '지방자치'].map((kw, i) => (
           <span key={i} className="keyword">{kw}</span>
         ))}
       </section>
@@ -358,7 +457,7 @@ export default function SocialStudy() {
       ))}
 
       <footer className="study-footer">
-        <p>천재교육 중학교 사회 1 | 154~178페이지</p>
+        <p>천재교육 중학교 사회 1 | 위도경도 기초 & 정치/민주주의</p>
       </footer>
     </div>
   )
